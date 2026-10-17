@@ -1,0 +1,46 @@
+# Playwright
+.playwright-mcp/
+
+# Post
+docs/posts/
+
+# Scripts
+scripts/
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# CDK
+cdk.out/
+cdk.context.json
+cdk-outputs*.json
+
+# Test and coverage output
+coverage/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python (agent, from Phase 1)
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

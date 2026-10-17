@@ -1,0 +1,74 @@
+[
+  {
+    "id": "m03-e01",
+    "moduleId": "modulo-03-condicionales",
+    "title": "Clasifica edades",
+    "statement": "Escribe la función `clasificar(edad)` que reciba la edad de una persona (un número entero) y devuelva el texto `\"menor\"` si tiene menos de 18 años, o `\"adulto\"` si tiene 18 años o más.\n\nEjemplos:\n- `clasificar(15)` devuelve `\"menor\"`\n- `clasificar(30)` devuelve `\"adulto\"`\n\nRecuerda usar `return` para devolver el texto, no `print`.",
+    "difficulty": 1,
+    "prerequisites": ["modulo-02"],
+    "starterCode": "def clasificar(edad):\n    pass\n",
+    "hints": [
+      "Piensa en un portero que revisa la edad en la entrada. ¿Qué pregunta de sí o no tendría que hacerse para decidir por qué puerta pasa cada persona?",
+      "Necesitas dos caminos: uno cuando la pregunta se cumple y otro cuando no. ¿Qué palabras de Python conoces para esos dos caminos? Y fíjate en la edad justo en el borde: ¿una persona de exactamente 18 años es menor o adulta?",
+      "Casi está: empieza con `if edad < 18:` y devuelve `\"menor\"` dentro de ese bloque. Después, con `else:`, devuelve `\"adulto\"`. Cuida los dos puntos y la indentación de 4 espacios."
+    ],
+    "tests": [
+      { "name": "menor de edad", "call": "clasificar(15)", "expected": "menor" },
+      { "name": "adulto", "call": "clasificar(30)", "expected": "adulto" },
+      { "name": "justo en el borde: 18 años es adulto", "call": "clasificar(18)", "expected": "adulto" },
+      { "name": "justo debajo del borde: 17 años es menor", "call": "clasificar(17)", "expected": "menor" },
+      { "name": "recién nacido", "call": "clasificar(0)", "expected": "menor" }
+    ],
+    "solution": "def clasificar(edad):\n    if edad < 18:\n        return \"menor\"\n    else:\n        return \"adulto\"\n"
+  },
+  {
+    "id": "m03-e02",
+    "moduleId": "modulo-03-condicionales",
+    "title": "Signo de un número",
+    "statement": "Escribe la función `signo(numero)` que reciba un número y devuelva el texto `\"positivo\"` si es mayor que cero, `\"negativo\"` si es menor que cero, o `\"cero\"` si es exactamente cero.\n\nEjemplos:\n- `signo(8)` devuelve `\"positivo\"`\n- `signo(-4)` devuelve `\"negativo\"`\n- `signo(0)` devuelve `\"cero\"`\n\nRecuerda usar `return` para devolver el texto, no `print`.",
+    "difficulty": 2,
+    "prerequisites": ["modulo-02"],
+    "starterCode": "def signo(numero):\n    pass\n",
+    "hints": [
+      "Esta vez hay tres posibles respuestas, no dos. ¿Crees que con un solo `if` y un `else` alcanzaría? ¿Qué herramienta de la lección sirve cuando hay más de dos caminos?",
+      "Imagina una fila de tres puertas. Primero revisas si el número es mayor que cero, luego si es menor que cero, y lo que sobre solo puede ser una cosa. ¿Cuál? Piensa qué parte de la estructura (`if`, `elif`, `else`) le corresponde a cada puerta.",
+      "Casi está: `if numero > 0:` devuelve `\"positivo\"`; `elif numero < 0:` devuelve `\"negativo\"`; y el `else:` final atrapa lo que queda, que solo puede ser el cero."
+    ],
+    "tests": [
+      { "name": "número positivo", "call": "signo(8)", "expected": "positivo" },
+      { "name": "número negativo", "call": "signo(-4)", "expected": "negativo" },
+      { "name": "justo en el borde: el cero", "call": "signo(0)", "expected": "cero" },
+      { "name": "el positivo más pequeño entero", "call": "signo(1)", "expected": "positivo" },
+      { "name": "el negativo más pequeño entero", "call": "signo(-1)", "expected": "negativo" },
+      { "name": "decimal positivo cercano a cero", "call": "signo(0.5)", "expected": "positivo" }
+    ],
+    "solution": "def signo(numero):\n    if numero > 0:\n        return \"positivo\"\n    elif numero < 0:\n        return \"negativo\"\n    else:\n        return \"cero\"\n"
+  },
+  {
+    "id": "m03-e03",
+    "moduleId": "modulo-03-condicionales",
+    "title": "Nota con letra",
+    "statement": "Escribe la función `nota_con_letra(puntaje)` que reciba un puntaje entero entre 0 y 100 y devuelva la letra que le corresponde:\n\n- 90 o más: `\"A\"`\n- de 80 a 89: `\"B\"`\n- de 70 a 79: `\"C\"`\n- de 60 a 69: `\"D\"`\n- menos de 60: `\"F\"`\n\nEjemplos:\n- `nota_con_letra(95)` devuelve `\"A\"`\n- `nota_con_letra(80)` devuelve `\"B\"`\n- `nota_con_letra(59)` devuelve `\"F\"`\n\nPresta atención a los valores del borde, como 90 o 60. Recuerda usar `return` para devolver la letra, no `print`.",
+    "difficulty": 3,
+    "prerequisites": ["modulo-02"],
+    "starterCode": "def nota_con_letra(puntaje):\n    pass\n",
+    "hints": [
+      "Hay cinco letras posibles, así que necesitas varias preguntas encadenadas. Antes de escribir código, piensa: ¿por cuál rango conviene empezar a preguntar, por el más alto o por el más bajo? ¿Qué pasa con un 95 si preguntas primero si es 60 o más?",
+      "Usa una fila de puertas que empieza por la nota más alta: un `if` para la primera letra, varios `elif` para las siguientes y un `else` para lo que no cumplió nada. Como Python entra por la primera puerta que se abre, no necesitas escribir el límite superior de cada rango. Y mira los bordes: ¿el 90 es A o B? ¿`>` o `>=`?",
+      "Casi está: `if puntaje >= 90:` devuelve `\"A\"`; `elif puntaje >= 80:` devuelve `\"B\"`; sigue con 70 para `\"C\"` y 60 para `\"D\"`; y deja un `else:` final que devuelva `\"F\"`."
+    ],
+    "tests": [
+      { "name": "puntaje alto", "call": "nota_con_letra(95)", "expected": "A" },
+      { "name": "justo en el borde: 90 es A", "call": "nota_con_letra(90)", "expected": "A" },
+      { "name": "justo debajo del borde: 89 es B", "call": "nota_con_letra(89)", "expected": "B" },
+      { "name": "justo en el borde: 80 es B", "call": "nota_con_letra(80)", "expected": "B" },
+      { "name": "puntaje medio: 75 es C", "call": "nota_con_letra(75)", "expected": "C" },
+      { "name": "justo en el borde: 70 es C", "call": "nota_con_letra(70)", "expected": "C" },
+      { "name": "justo en el borde: 60 es D", "call": "nota_con_letra(60)", "expected": "D" },
+      { "name": "justo debajo del borde: 59 es F", "call": "nota_con_letra(59)", "expected": "F" },
+      { "name": "puntaje máximo", "call": "nota_con_letra(100)", "expected": "A" },
+      { "name": "puntaje mínimo", "call": "nota_con_letra(0)", "expected": "F" }
+    ],
+    "solution": "def nota_con_letra(puntaje):\n    if puntaje >= 90:\n        return \"A\"\n    elif puntaje >= 80:\n        return \"B\"\n    elif puntaje >= 70:\n        return \"C\"\n    elif puntaje >= 60:\n        return \"D\"\n    else:\n        return \"F\"\n"
+  }
+]

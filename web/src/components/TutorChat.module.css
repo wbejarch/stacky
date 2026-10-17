@@ -1,0 +1,177 @@
+/* Fills its zone: the transcript grows and the form stays pinned at the bottom. */
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+  min-height: 100%;
+  padding: var(--space-4);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.3;
+}
+
+/* Focusable scroll region: it gets the shared :focus-visible outline from index.css. */
+.transcript {
+  flex: 1 1 0;
+  min-height: 10rem;
+  overflow-y: auto;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+}
+
+.empty {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.message {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-lg);
+  color: var(--color-text);
+}
+
+.student {
+  background: var(--color-primary-soft);
+}
+
+.tutor {
+  background: var(--color-surface-sunken);
+}
+
+.speaker {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.text {
+  margin: 0.125rem 0 0;
+  /* Keep line breaks and wrap long words; the text is never interpreted as HTML. */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.typing,
+.incomplete {
+  display: block;
+  font-size: var(--font-size-small);
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-danger-border);
+  border-left-width: 6px;
+  border-radius: var(--radius-lg);
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.errorText {
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  resize: vertical;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+.input:disabled {
+  border-color: var(--color-disabled-border);
+  background: var(--color-disabled-bg);
+  color: var(--color-disabled-text);
+  cursor: not-allowed;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.button {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--color-primary-soft);
+}
+
+.primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 600;
+}
+
+.primary:hover:not(:disabled) {
+  border-color: var(--color-primary-hover);
+  background: var(--color-primary-hover);
+}
+
+.button:disabled {
+  border-color: var(--color-disabled-border);
+  background: var(--color-disabled-bg);
+  color: var(--color-disabled-text);
+  font-weight: 400;
+  cursor: not-allowed;
+}
+
+/* Phones and tablets: comfortable touch targets. */
+@media (pointer: coarse) {
+  .button {
+    min-height: var(--touch-target);
+    min-width: var(--touch-target);
+  }
+}

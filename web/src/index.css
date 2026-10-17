@@ -1,0 +1,145 @@
+/*
+ * Global styles: design tokens, base typography and the shared focus outline.
+ * Component styles live in CSS Modules and only consume the tokens below.
+ *
+ * Contrast (WCAG 2.1 AA, Requirement 14.4): every text/background pair used in
+ * the modules is checked to be >= 4.5:1 and every control border / focus ring
+ * to be >= 3:1 by `web/src/styles/contrast.test.ts`. Keep that test in sync
+ * when you add or change a token.
+ */
+:root {
+  color-scheme: light;
+
+  /* Text and surfaces */
+  --color-text: #1f2328;
+  --color-text-muted: #4a5560;
+  --color-bg: #ffffff;
+  --color-surface: #f6f8fa;
+  --color-surface-sunken: #eceff2;
+
+  /* Borders: `border` is decorative, `border-strong` delimits controls (>= 3:1). */
+  --color-border: #d0d7de;
+  --color-border-strong: #6e7781;
+
+  /* Primary action and keyboard focus */
+  --color-primary: #0b5cad;
+  --color-primary-hover: #094a8d;
+  --color-on-primary: #ffffff;
+  --color-primary-soft: #e3eefb;
+  --color-focus: #0b5cad;
+
+  /* Feedback */
+  --color-success: #11501f;
+  --color-success-border: #1b6e34;
+  --color-success-bg: #e6f6ea;
+  --color-danger: #7a1010;
+  --color-danger-border: #a11a1a;
+  --color-danger-bg: #fdecec;
+
+  /* Disabled controls stay legible (text >= 4.5:1 on their background) */
+  --color-disabled-text: #545d66;
+  --color-disabled-bg: #e6e8eb;
+  --color-disabled-border: #6e7781;
+
+  /* Syntax highlighting (all >= 4.5:1 on --color-surface and --color-bg) */
+  --code-keyword: #b3131f;
+  --code-string: #0a3069;
+  --code-number: #0550ae;
+  --code-comment: #57606a;
+  --code-function: #6639ba;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgb(31 35 40 / 8%), 0 1px 3px rgb(31 35 40 / 6%);
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;
+  --font-size-base: 1rem;
+  --font-size-small: 0.875rem;
+  --line-height: 1.5;
+
+  /* Spacing and shape */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Focus ring */
+  --focus-ring-width: 3px;
+  --focus-ring-offset: 2px;
+
+  /* Code editor height: leaves room for "Ejecutar", hints and results on short screens. */
+  --editor-height: clamp(11rem, 32vh, 22rem);
+
+  /* Minimum touch target on coarse pointers (phones and tablets). */
+  --touch-target: 2.75rem;
+
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* Form controls do not inherit the font by default. */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  /*
+   * No ligatures: fonts such as Cascadia Code draw "!=", "<=" and ">=" as the
+   * symbols "≠", "≤" and "≥", but the student has to type the ASCII characters.
+   */
+  font-variant-ligatures: none;
+}
+
+/*
+ * One consistent, always visible keyboard focus indicator (Requirement 14.1)
+ * for buttons, form fields, links and focusable regions such as the chat
+ * transcript. The offset keeps it visible on filled buttons.
+ */
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* Reduced motion: spinners and transitions are effectively disabled. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

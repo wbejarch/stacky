@@ -1,0 +1,837 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Create the root `package.json` with npm workspaces (`shared`, `web`, `api`, `infra`), `.gitignore`, `.editorconfig` and a base `tsconfig.base.json` with `strict: true`": [
+      {
+        "executionId": "0950fb08-6a61-412d-be0f-f6e44ae23311",
+        "chatSessionId": "sess_0c049007-c6d8-42df-b8ce-23e77a0f4b9e",
+        "timestamp": 1792013797483
+      },
+      {
+        "executionId": "0950fb08-6a61-412d-be0f-f6e44ae23311",
+        "chatSessionId": "sess_0c049007-c6d8-42df-b8ce-23e77a0f4b9e",
+        "timestamp": 1792013800517
+      },
+      {
+        "executionId": "0950fb08-6a61-412d-be0f-f6e44ae23311",
+        "chatSessionId": "sess_0c049007-c6d8-42df-b8ce-23e77a0f4b9e",
+        "timestamp": 1792013846522
+      }
+    ],
+    "1.2 Add a shared ESLint flat config (TypeScript, React hooks rules) and root scripts `lint`, `typecheck` and `test` that run in every workspace": [
+      {
+        "executionId": "0950fb08-6a61-412d-be0f-f6e44ae23311",
+        "chatSessionId": "sess_0c049007-c6d8-42df-b8ce-23e77a0f4b9e",
+        "timestamp": 1792013850898
+      },
+      {
+        "executionId": "0950fb08-6a61-412d-be0f-f6e44ae23311",
+        "chatSessionId": "sess_0c049007-c6d8-42df-b8ce-23e77a0f4b9e",
+        "timestamp": 1792014291627
+      }
+    ],
+    "1.3 Create a README skeleton with the Phase 0 to 5 roadmap and the command list (filled in at task 17)": [
+      {
+        "executionId": "0950fb08-6a61-412d-be0f-f6e44ae23311",
+        "chatSessionId": "sess_0c049007-c6d8-42df-b8ce-23e77a0f4b9e",
+        "timestamp": 1792013851051
+      },
+      {
+        "executionId": "0950fb08-6a61-412d-be0f-f6e44ae23311",
+        "chatSessionId": "sess_0c049007-c6d8-42df-b8ce-23e77a0f4b9e",
+        "timestamp": 1792014291813
+      }
+    ],
+    "2.1 Create the `@tutor-agent/shared` package that exports TypeScript source and implement the zod schemas and inferred types for `Module`, `Lesson`, `Exercise`, `ChatRequest`, `ChatStreamEvent`, `HintRequest`, `HintResponse`, `RunRequest`, `RunResult`, `Progress` and `ApiError`": [
+      {
+        "executionId": "36f936cc-ea08-425f-a666-9c8ce544a9ed",
+        "chatSessionId": "sess_dfc7f22d-b87f-499f-af34-6915c06b0fa5",
+        "timestamp": 1792015579846
+      },
+      {
+        "executionId": "36f936cc-ea08-425f-a666-9c8ce544a9ed",
+        "chatSessionId": "sess_dfc7f22d-b87f-499f-af34-6915c06b0fa5",
+        "timestamp": 1792015644110
+      }
+    ],
+    "3.1 Write `content/modulo-03-condicionales/leccion.md` in Spanish (`if/elif/else`, booleans, analogies, small examples); the first `#` heading is the module title": [
+      {
+        "executionId": "36f936cc-ea08-425f-a666-9c8ce544a9ed",
+        "chatSessionId": "sess_dfc7f22d-b87f-499f-af34-6915c06b0fa5",
+        "timestamp": 1792015654648
+      },
+      {
+        "executionId": "36f936cc-ea08-425f-a666-9c8ce544a9ed",
+        "chatSessionId": "sess_dfc7f22d-b87f-499f-af34-6915c06b0fa5",
+        "timestamp": 1792015689472
+      }
+    ],
+    "2.2 Implement `ExerciseRecordSchema` (on-disk shape, 3-tuple of hints, tests, solution) and expose it only through the subpath `@tutor-agent/shared/content`": [
+      {
+        "executionId": "36f936cc-ea08-425f-a666-9c8ce544a9ed",
+        "chatSessionId": "sess_dfc7f22d-b87f-499f-af34-6915c06b0fa5",
+        "timestamp": 1792015696144
+      },
+      {
+        "executionId": "36f936cc-ea08-425f-a666-9c8ce544a9ed",
+        "chatSessionId": "sess_dfc7f22d-b87f-499f-af34-6915c06b0fa5",
+        "timestamp": 1792015735986
+      }
+    ],
+    "2.4 Implement `exerciseIdsFor(module)` in `shared/src/ids.ts`, export it from the package root, and test it with the module 3 example": [
+      {
+        "executionId": "36f936cc-ea08-425f-a666-9c8ce544a9ed",
+        "chatSessionId": "sess_dfc7f22d-b87f-499f-af34-6915c06b0fa5",
+        "timestamp": 1792015737035
+      },
+      {
+        "executionId": "36f936cc-ea08-425f-a666-9c8ce544a9ed",
+        "chatSessionId": "sess_dfc7f22d-b87f-499f-af34-6915c06b0fa5",
+        "timestamp": 1792015836487
+      }
+    ],
+    "2.3 Write Vitest tests for valid and invalid samples of every schema and for the absence of `solution` in the public `Exercise` schema": [
+      {
+        "executionId": "36f936cc-ea08-425f-a666-9c8ce544a9ed",
+        "chatSessionId": "sess_dfc7f22d-b87f-499f-af34-6915c06b0fa5",
+        "timestamp": 1792015844124
+      },
+      {
+        "executionId": "36f936cc-ea08-425f-a666-9c8ce544a9ed",
+        "chatSessionId": "sess_dfc7f22d-b87f-499f-af34-6915c06b0fa5",
+        "timestamp": 1792015908326
+      }
+    ],
+    "2. Build the `shared/` contract package": [
+      {
+        "executionId": "36f936cc-ea08-425f-a666-9c8ce544a9ed",
+        "chatSessionId": "sess_dfc7f22d-b87f-499f-af34-6915c06b0fa5",
+        "timestamp": 1792015908476
+      }
+    ],
+    "3.2 Write `ejercicios.json` with `m03-e01` (classify ages), `m03-e02` (sign of a number) and `m03-e03` (letter grade), each with 3 hints, at least 3 tests including a boundary case, and a reference solution": [
+      {
+        "executionId": "e94b9a6a-c1cb-41d4-a556-b632e8a8cd15",
+        "chatSessionId": "sess_f51552bd-0dfd-4ccc-9f1d-c661f035e08a",
+        "timestamp": 1792016133165
+      },
+      {
+        "executionId": "e94b9a6a-c1cb-41d4-a556-b632e8a8cd15",
+        "chatSessionId": "sess_f51552bd-0dfd-4ccc-9f1d-c661f035e08a",
+        "timestamp": 1792016219680
+      }
+    ],
+    "3.3 Write `errores-comunes.md` with typical mistakes (`=` vs `==`, indentation, missing `:`, unreachable `elif`) and how to explain each in simple words": [
+      {
+        "executionId": "e94b9a6a-c1cb-41d4-a556-b632e8a8cd15",
+        "chatSessionId": "sess_f51552bd-0dfd-4ccc-9f1d-c661f035e08a",
+        "timestamp": 1792016133352
+      },
+      {
+        "executionId": "e94b9a6a-c1cb-41d4-a556-b632e8a8cd15",
+        "chatSessionId": "sess_f51552bd-0dfd-4ccc-9f1d-c661f035e08a",
+        "timestamp": 1792016219939
+      }
+    ],
+    "3.4 Add a test in `shared/` that validates `ejercicios.json` with `ExerciseRecordSchema`, checks that ids are unique and follow the `exerciseIdsFor` convention, and that every exercise has 3 hints and at least 3 tests": [
+      {
+        "executionId": "e94b9a6a-c1cb-41d4-a556-b632e8a8cd15",
+        "chatSessionId": "sess_f51552bd-0dfd-4ccc-9f1d-c661f035e08a",
+        "timestamp": 1792016235120
+      },
+      {
+        "executionId": "e94b9a6a-c1cb-41d4-a556-b632e8a8cd15",
+        "chatSessionId": "sess_f51552bd-0dfd-4ccc-9f1d-c661f035e08a",
+        "timestamp": 1792016291984
+      }
+    ],
+    "3. Author the module 3 content": [
+      {
+        "executionId": "e94b9a6a-c1cb-41d4-a556-b632e8a8cd15",
+        "chatSessionId": "sess_f51552bd-0dfd-4ccc-9f1d-c661f035e08a",
+        "timestamp": 1792016292171
+      }
+    ],
+    "4.1 Create the `api` workspace (strict `tsconfig`, Vitest, `@types/aws-lambda`, `tsx`) and implement `lib/http.ts` (JSON responses, `ApiError` helper, CORS header helper using `ALLOWED_ORIGINS`), `lib/logger.ts` (JSON logs and `withRequestLogging`) and `lib/validate.ts` (zod parsing with a 64 KB body cap)": [
+      {
+        "executionId": "fe3f7a5a-1c13-4628-99c2-54edcb107d1b",
+        "chatSessionId": "sess_749be591-e8f6-4c8e-b18f-ef721e02f672",
+        "timestamp": 1792016326442
+      },
+      {
+        "executionId": "fe3f7a5a-1c13-4628-99c2-54edcb107d1b",
+        "chatSessionId": "sess_749be591-e8f6-4c8e-b18f-ef721e02f672",
+        "timestamp": 1792016544645
+      }
+    ],
+    "4.2 Implement `lib/content.ts` that imports the module content through esbuild loaders and exposes `listModules`, `getLesson`, `getExerciseRecord` and `toPublicExercise` (field-by-field allowlist)": [
+      {
+        "executionId": "fe3f7a5a-1c13-4628-99c2-54edcb107d1b",
+        "chatSessionId": "sess_749be591-e8f6-4c8e-b18f-ef721e02f672",
+        "timestamp": 1792016548270
+      },
+      {
+        "executionId": "fe3f7a5a-1c13-4628-99c2-54edcb107d1b",
+        "chatSessionId": "sess_749be591-e8f6-4c8e-b18f-ef721e02f672",
+        "timestamp": 1792016653265
+      }
+    ],
+    "4.3 Implement `lib/mock-tutor.ts` with the fixed Spanish Socratic reply, the `fragments()` splitter and the configurable token delay": [
+      {
+        "executionId": "fe3f7a5a-1c13-4628-99c2-54edcb107d1b",
+        "chatSessionId": "sess_749be591-e8f6-4c8e-b18f-ef721e02f672",
+        "timestamp": 1792016548970
+      },
+      {
+        "executionId": "fe3f7a5a-1c13-4628-99c2-54edcb107d1b",
+        "chatSessionId": "sess_749be591-e8f6-4c8e-b18f-ef721e02f672",
+        "timestamp": 1792016654068
+      }
+    ],
+    "4. Implement the API libraries": [
+      {
+        "executionId": "fe3f7a5a-1c13-4628-99c2-54edcb107d1b",
+        "chatSessionId": "sess_749be591-e8f6-4c8e-b18f-ef721e02f672",
+        "timestamp": 1792016654223
+      }
+    ],
+    "5.1 Implement `handlers/content.ts` for `GET /api/modules`, `GET /api/modules/{id}/lesson` and `GET /api/exercises/{id}`, with 404 handling": [
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792016891036
+      },
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792016995595
+      }
+    ],
+    "5.2 Implement `handlers/hint.ts` for `POST /api/hint` returning `{ level, text }` from the content hints, with 400 and 404 handling": [
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792016891240
+      },
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792016995890
+      }
+    ],
+    "5.3 Implement `handlers/run.ts` for `POST /api/run` with the simulated rule (starter code fails, any other code passes) and no evaluation of the code": [
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792016891710
+      },
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792016996845
+      }
+    ],
+    "5.4 Implement `handlers/progress.ts` for `GET /api/progress` with the fixed value": [
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792016892545
+      },
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792016997589
+      }
+    ],
+    "5.5 Implement `handlers/chat.ts` with `awslambda.streamifyResponse` and `HttpResponseStream.from`, SSE framing for `token`, `done` and `error`, 400 handling before the stream opens, and the `__simulate_error__` trigger": [
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792016893641
+      },
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792016998660
+      }
+    ],
+    "5.6 Write Vitest tests for every handler: contract conformance with the `shared` schemas, 400/404/413 cases, SSE framing, log content, and a recursive check that no response body contains a `solution` key or any solution text": [
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792016999623
+      },
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792017273697
+      }
+    ],
+    "5. Implement the Lambda handlers": [
+      {
+        "executionId": "d46cf0da-1033-4f04-bead-6ec285c42bb8",
+        "chatSessionId": "sess_f3139fd9-6e5e-4dc1-9281-e62dc4df5d2a",
+        "timestamp": 1792017273905
+      }
+    ],
+    "6.1 Implement `api/src/local/dev-server.ts` (Node `http` adapter to API Gateway proxy events, minimal `awslambda` global for the streaming handler) and the `npm run dev -w api` script on port 3001": [
+      {
+        "executionId": "a5de6c3b-96ae-4b76-8cad-64be2834bb45",
+        "chatSessionId": "sess_c18d2892-fcc3-4885-b1b2-d247574d6bb7",
+        "timestamp": 1792017487778
+      },
+      {
+        "executionId": "a5de6c3b-96ae-4b76-8cad-64be2834bb45",
+        "chatSessionId": "sess_c18d2892-fcc3-4885-b1b2-d247574d6bb7",
+        "timestamp": 1792017704577
+      }
+    ],
+    "6. Provide a local API server": [
+      {
+        "executionId": "a5de6c3b-96ae-4b76-8cad-64be2834bb45",
+        "chatSessionId": "sess_c18d2892-fcc3-4885-b1b2-d247574d6bb7",
+        "timestamp": 1792017704820
+      }
+    ],
+    "7.1 Create the Vite + React + TypeScript (strict) app in `web/` with CSS Modules, Vitest + React Testing Library (jsdom), `react-markdown`, `@monaco-editor/react`, and a dev proxy from `/api` to `http://localhost:3001`": [
+      {
+        "executionId": "e40db694-7af9-4995-bc4a-f299f02ace70",
+        "chatSessionId": "sess_3570056a-c9b2-4b50-9913-34e0e0a52825",
+        "timestamp": 1792017737451
+      },
+      {
+        "executionId": "e40db694-7af9-4995-bc4a-f299f02ace70",
+        "chatSessionId": "sess_3570056a-c9b2-4b50-9913-34e0e0a52825",
+        "timestamp": 1792017938684
+      }
+    ],
+    "7.2 Add the ESLint rule that forbids `@tutor-agent/shared/content` and direct `fetch` usage outside `src/api/`": [
+      {
+        "executionId": "e40db694-7af9-4995-bc4a-f299f02ace70",
+        "chatSessionId": "sess_3570056a-c9b2-4b50-9913-34e0e0a52825",
+        "timestamp": 1792017949022
+      },
+      {
+        "executionId": "e40db694-7af9-4995-bc4a-f299f02ace70",
+        "chatSessionId": "sess_3570056a-c9b2-4b50-9913-34e0e0a52825",
+        "timestamp": 1792018031168
+      }
+    ],
+    "7. Scaffold the web application": [
+      {
+        "executionId": "e40db694-7af9-4995-bc4a-f299f02ace70",
+        "chatSessionId": "sess_3570056a-c9b2-4b50-9913-34e0e0a52825",
+        "timestamp": 1792018031280
+      }
+    ],
+    "8.1 Implement `src/api/sse.ts`, a pure parser over `ReadableStream<Uint8Array>` that handles frames split across chunks and multi-line `data:`": [
+      {
+        "executionId": "efe875fc-029b-4aad-baae-e10cf440cb31",
+        "chatSessionId": "sess_461c1fb6-38c1-4139-9927-d2494ccf6e2c",
+        "timestamp": 1792018077495
+      },
+      {
+        "executionId": "efe875fc-029b-4aad-baae-e10cf440cb31",
+        "chatSessionId": "sess_461c1fb6-38c1-4139-9927-d2494ccf6e2c",
+        "timestamp": 1792018144611
+      }
+    ],
+    "8.2 Implement `src/api/client.ts` with all endpoint functions, `X-Session-Id` from `sessionStorage`, base URL from `VITE_API_URL` with relative fallback, schema validation, a typed `ApiClientError` and `streamChat` with `AbortController`": [
+      {
+        "executionId": "efe875fc-029b-4aad-baae-e10cf440cb31",
+        "chatSessionId": "sess_461c1fb6-38c1-4139-9927-d2494ccf6e2c",
+        "timestamp": 1792018145446
+      },
+      {
+        "executionId": "efe875fc-029b-4aad-baae-e10cf440cb31",
+        "chatSessionId": "sess_461c1fb6-38c1-4139-9927-d2494ccf6e2c",
+        "timestamp": 1792018248910
+      }
+    ],
+    "8.3 Write Vitest tests for the parser (split chunks, multi-line data, error event) and the client (URL building, headers, schema failure, cancellation)": [
+      {
+        "executionId": "efe875fc-029b-4aad-baae-e10cf440cb31",
+        "chatSessionId": "sess_461c1fb6-38c1-4139-9927-d2494ccf6e2c",
+        "timestamp": 1792018249508
+      },
+      {
+        "executionId": "efe875fc-029b-4aad-baae-e10cf440cb31",
+        "chatSessionId": "sess_461c1fb6-38c1-4139-9927-d2494ccf6e2c",
+        "timestamp": 1792018430087
+      }
+    ],
+    "8. Implement the API client and SSE parser": [
+      {
+        "executionId": "efe875fc-029b-4aad-baae-e10cf440cb31",
+        "chatSessionId": "sess_461c1fb6-38c1-4139-9927-d2494ccf6e2c",
+        "timestamp": 1792018430266
+      }
+    ],
+    "9.1 Implement `useExercise` (modules, lesson, exercises through `exerciseIdsFor`, selection, local completed ids, initial load error and retry)": [
+      {
+        "executionId": "eb9748ec-2df3-4d8a-8fdc-987eaebe07ea",
+        "chatSessionId": "sess_8d09e621-1506-4503-a93a-107f5bd3398f",
+        "timestamp": 1792018532367
+      },
+      {
+        "executionId": "eb9748ec-2df3-4d8a-8fdc-987eaebe07ea",
+        "chatSessionId": "sess_8d09e621-1506-4503-a93a-107f5bd3398f",
+        "timestamp": 1792018711229
+      }
+    ],
+    "9.2 Implement `useRunCode` (running flag, result, error)": [
+      {
+        "executionId": "eb9748ec-2df3-4d8a-8fdc-987eaebe07ea",
+        "chatSessionId": "sess_8d09e621-1506-4503-a93a-107f5bd3398f",
+        "timestamp": 1792018532506
+      },
+      {
+        "executionId": "eb9748ec-2df3-4d8a-8fdc-987eaebe07ea",
+        "chatSessionId": "sess_8d09e621-1506-4503-a93a-107f5bd3398f",
+        "timestamp": 1792018711548
+      }
+    ],
+    "9.3 Implement `useChat` (messages, streaming flag, send, cancel, error and retry, hint insertion) and hint progress per exercise": [
+      {
+        "executionId": "eb9748ec-2df3-4d8a-8fdc-987eaebe07ea",
+        "chatSessionId": "sess_8d09e621-1506-4503-a93a-107f5bd3398f",
+        "timestamp": 1792018532738
+      },
+      {
+        "executionId": "eb9748ec-2df3-4d8a-8fdc-987eaebe07ea",
+        "chatSessionId": "sess_8d09e621-1506-4503-a93a-107f5bd3398f",
+        "timestamp": 1792018712381
+      }
+    ],
+    "9.4 Implement `TutorProvider` that composes the hooks through Context": [
+      {
+        "executionId": "eb9748ec-2df3-4d8a-8fdc-987eaebe07ea",
+        "chatSessionId": "sess_8d09e621-1506-4503-a93a-107f5bd3398f",
+        "timestamp": 1792018715405
+      },
+      {
+        "executionId": "eb9748ec-2df3-4d8a-8fdc-987eaebe07ea",
+        "chatSessionId": "sess_8d09e621-1506-4503-a93a-107f5bd3398f",
+        "timestamp": 1792018806541
+      }
+    ],
+    "9. Implement state and hooks": [
+      {
+        "executionId": "eb9748ec-2df3-4d8a-8fdc-987eaebe07ea",
+        "chatSessionId": "sess_8d09e621-1506-4503-a93a-107f5bd3398f",
+        "timestamp": 1792018806679
+      }
+    ],
+    "10.1 Implement `Header`, `LessonPanel` (Markdown without raw HTML, exercise tabs, statement, difficulty) and the three-zone layout with the below-900-px single-column rule": [
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792018937415
+      },
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792019087735
+      }
+    ],
+    "10.2 Implement `EditorPanel` with Monaco (Python), the \"Ejecutar\" button with disabled and progress state, the three hint buttons with ordered enabling, and the keyboard-exit hint text": [
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792018943867
+      },
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792019088300
+      }
+    ],
+    "10.3 Implement `ResultsPanel` (per-test status and message, `stdout`, `stderr`, celebration message)": [
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792018943966
+      },
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792019089290
+      }
+    ],
+    "10.4 Implement `TutorChat` (transcript in `aria-live=\"polite\"`, input, send, cancel, error message with retry)": [
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792018944077
+      },
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792019090094
+      }
+    ],
+    "10.5 Apply styles with CSS Modules: visible focus outline, 4.5:1 contrast, semantic regions (`main`, `section` with `aria-label`), loading and error states": [
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792019090825
+      },
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792019333549
+      }
+    ],
+    "10.6 Write React Testing Library tests for hint button ordering, run button disabled while running, results rendering, chat token appending, cancel and error states": [
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792019334200
+      },
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792019517099
+      }
+    ],
+    "10. Implement the UI components": [
+      {
+        "executionId": "7d216f94-ac43-4945-8a46-5689ca505f7e",
+        "chatSessionId": "sess_52c06c67-8bef-491f-8941-a3fe596dbc63",
+        "timestamp": 1792019517331
+      }
+    ],
+    "11.1 Run `typecheck`, `lint` and `test` in `shared`, `api` and `web`, then run the API dev server and the Vite dev server and walk through the manual E2E path (open module, chat, three hints, run, complete, cancel, `__simulate_error__`)": [
+      {
+        "executionId": "c9b59b6d-f30b-42de-aa03-c07d8b2f79fa",
+        "chatSessionId": "sess_7157e1d3-9304-454f-9882-81b181ae06f7",
+        "timestamp": 1792019595886
+      },
+      {
+        "executionId": "c9b59b6d-f30b-42de-aa03-c07d8b2f79fa",
+        "chatSessionId": "sess_7157e1d3-9304-454f-9882-81b181ae06f7",
+        "timestamp": 1792019711735
+      }
+    ],
+    "11. Checkpoint: local end-to-end": [
+      {
+        "executionId": "c9b59b6d-f30b-42de-aa03-c07d8b2f79fa",
+        "chatSessionId": "sess_7157e1d3-9304-454f-9882-81b181ae06f7",
+        "timestamp": 1792019711940
+      }
+    ],
+    "12.1 Create the `infra` workspace (CDK app, `cdk.json` context, local `esbuild` devDependency, Jest + ts-jest) and `bin/app.ts` that applies the `Project` and `Phase` tags and creates the stacks": [
+      {
+        "executionId": "0783612e-b03b-4ab8-a2bc-690e09961d58",
+        "chatSessionId": "sess_6d313f42-75aa-4a36-bef8-ed9eb9b7039c",
+        "timestamp": 1792019770201
+      },
+      {
+        "executionId": "0783612e-b03b-4ab8-a2bc-690e09961d58",
+        "chatSessionId": "sess_6d313f42-75aa-4a36-bef8-ed9eb9b7039c",
+        "timestamp": 1792020194367
+      }
+    ],
+    "12.2 Implement the five `NodejsFunction` constructs (Node.js 22.x, arm64, ESM bundling with `.md` text loader, root lockfile, per-function role with basic execution only) and the log groups": [
+      {
+        "executionId": "0783612e-b03b-4ab8-a2bc-690e09961d58",
+        "chatSessionId": "sess_6d313f42-75aa-4a36-bef8-ed9eb9b7039c",
+        "timestamp": 1792020205560
+      },
+      {
+        "executionId": "0783612e-b03b-4ab8-a2bc-690e09961d58",
+        "chatSessionId": "sess_6d313f42-75aa-4a36-bef8-ed9eb9b7039c",
+        "timestamp": 1792020858419
+      }
+    ],
+    "12.3 Implement the regional `RestApi` with stage `prod`, throttling, JSON access logs, resources and methods under `/api`, request validator with minimal models, and restricted CORS preflight": [
+      {
+        "executionId": "0783612e-b03b-4ab8-a2bc-690e09961d58",
+        "chatSessionId": "sess_6d313f42-75aa-4a36-bef8-ed9eb9b7039c",
+        "timestamp": 1792020859181
+      },
+      {
+        "executionId": "0783612e-b03b-4ab8-a2bc-690e09961d58",
+        "chatSessionId": "sess_6d313f42-75aa-4a36-bef8-ed9eb9b7039c",
+        "timestamp": 1792021205662
+      }
+    ],
+    "12.4 Configure `POST /api/chat` with the `CfnMethod` overrides (`ResponseTransferMode: STREAM`, `.../response-streaming-invocations` URI, explicit integration timeout) while keeping the other methods buffered": [
+      {
+        "executionId": "0783612e-b03b-4ab8-a2bc-690e09961d58",
+        "chatSessionId": "sess_6d313f42-75aa-4a36-bef8-ed9eb9b7039c",
+        "timestamp": 1792021204906
+      },
+      {
+        "executionId": "0783612e-b03b-4ab8-a2bc-690e09961d58",
+        "chatSessionId": "sess_6d313f42-75aa-4a36-bef8-ed9eb9b7039c",
+        "timestamp": 1792021427877
+      }
+    ],
+    "12.5 Add `CfnOutput` values for the API URL, API id and function ARNs": [
+      {
+        "executionId": "0783612e-b03b-4ab8-a2bc-690e09961d58",
+        "chatSessionId": "sess_6d313f42-75aa-4a36-bef8-ed9eb9b7039c",
+        "timestamp": 1792021428434
+      },
+      {
+        "executionId": "0783612e-b03b-4ab8-a2bc-690e09961d58",
+        "chatSessionId": "sess_6d313f42-75aa-4a36-bef8-ed9eb9b7039c",
+        "timestamp": 1792021764140
+      }
+    ],
+    "12. Implement `ApiStack`": [
+      {
+        "executionId": "0783612e-b03b-4ab8-a2bc-690e09961d58",
+        "chatSessionId": "sess_6d313f42-75aa-4a36-bef8-ed9eb9b7039c",
+        "timestamp": 1792021764392
+      }
+    ],
+    "13.1 Create the private encrypted S3 bucket and the CloudFront distribution with OAC, HTTPS redirect and security headers, with no custom error responses": [
+      {
+        "executionId": "06fd171e-5d63-4f69-beed-9c15501a5b3a",
+        "chatSessionId": "sess_b87a5acd-be81-46a7-a291-26af630b1b90",
+        "timestamp": 1792021893926
+      },
+      {
+        "executionId": "06fd171e-5d63-4f69-beed-9c15501a5b3a",
+        "chatSessionId": "sess_b87a5acd-be81-46a7-a291-26af630b1b90",
+        "timestamp": 1792022000317
+      }
+    ],
+    "13.2 Add the `/api/*` behavior to the REST API origin (origin path `/prod`, caching disabled, all viewer headers except `Host`, no compression, 60 s read timeout)": [
+      {
+        "executionId": "06fd171e-5d63-4f69-beed-9c15501a5b3a",
+        "chatSessionId": "sess_b87a5acd-be81-46a7-a291-26af630b1b90",
+        "timestamp": 1792022003496
+      },
+      {
+        "executionId": "06fd171e-5d63-4f69-beed-9c15501a5b3a",
+        "chatSessionId": "sess_b87a5acd-be81-46a7-a291-26af630b1b90",
+        "timestamp": 1792022264320
+      }
+    ],
+    "13.3 Add `BucketDeployment` for `web/dist` (path from context) with invalidation, and `CfnOutput` values for the site URL, distribution id and bucket name": [
+      {
+        "executionId": "06fd171e-5d63-4f69-beed-9c15501a5b3a",
+        "chatSessionId": "sess_b87a5acd-be81-46a7-a291-26af630b1b90",
+        "timestamp": 1792022267727
+      },
+      {
+        "executionId": "06fd171e-5d63-4f69-beed-9c15501a5b3a",
+        "chatSessionId": "sess_b87a5acd-be81-46a7-a291-26af630b1b90",
+        "timestamp": 1792022425150
+      }
+    ],
+    "13. Implement `WebStack`": [
+      {
+        "executionId": "06fd171e-5d63-4f69-beed-9c15501a5b3a",
+        "chatSessionId": "sess_b87a5acd-be81-46a7-a291-26af630b1b90",
+        "timestamp": 1792022425262
+      }
+    ],
+    "14.1 Write Jest assertions for `ApiStack`: runtime `nodejs22.x`, `arm64`, five functions, `ResponseTransferMode: STREAM` only on `/api/chat`, URI suffix, stage throttling, regional endpoint, tags, and absence of any `bedrock` or `bedrock-agentcore` action in IAM policies": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022467875
+      },
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022474497
+      },
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022740974
+      }
+    ],
+    "14.2 Write Jest assertions for `WebStack`: public access blocked, encryption, HTTPS redirect, `/api/*` behavior with caching disabled, no custom error responses, outputs present": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022468042
+      },
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022474807
+      },
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022741656
+      }
+    ],
+    "15.1 Run `typecheck`, `lint`, all tests, `npm run build -w web` and `cdk synth`; fix any failure": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022468175
+      },
+      {
+        "executionId": "f53b0292-6eca-4e9e-b0b2-cfa1ee385a18",
+        "chatSessionId": "sess_18480192-c69c-41c3-b5f4-8be5f4e3824b",
+        "timestamp": 1792022781578
+      },
+      {
+        "executionId": "f53b0292-6eca-4e9e-b0b2-cfa1ee385a18",
+        "chatSessionId": "sess_18480192-c69c-41c3-b5f4-8be5f4e3824b",
+        "timestamp": 1792023183199
+      }
+    ],
+    "16.1 Confirm the region choice and bootstrap the account if needed, then run `cdk deploy ApiStack WebStack`": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022468287
+      },
+      {
+        "executionId": "89b319cf-5a2d-488d-80d1-e50cd1974027",
+        "chatSessionId": "sess_a94585f0-cc95-4d23-aa4b-d8ea28f4a97d",
+        "timestamp": 1792023304179
+      },
+      {
+        "executionId": "89b319cf-5a2d-488d-80d1-e50cd1974027",
+        "chatSessionId": "sess_a94585f0-cc95-4d23-aa4b-d8ea28f4a97d",
+        "timestamp": 1792024024348
+      }
+    ],
+    "16.2 Verify that API Gateway streams `/api/chat` in the chosen region: first `token` arrives in under 1 second and tokens arrive incrementally; if not, apply the Function URL fallback and record it in the design": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022468389
+      },
+      {
+        "executionId": "89b319cf-5a2d-488d-80d1-e50cd1974027",
+        "chatSessionId": "sess_a94585f0-cc95-4d23-aa4b-d8ea28f4a97d",
+        "timestamp": 1792024027597
+      },
+      {
+        "executionId": "89b319cf-5a2d-488d-80d1-e50cd1974027",
+        "chatSessionId": "sess_a94585f0-cc95-4d23-aa4b-d8ea28f4a97d",
+        "timestamp": 1792024694043
+      }
+    ],
+    "16.3 Verify that CloudFront passes the SSE stream through the `/api/*` behavior without buffering, from the CloudFront URL in the browser": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022468485
+      },
+      {
+        "executionId": "89b319cf-5a2d-488d-80d1-e50cd1974027",
+        "chatSessionId": "sess_a94585f0-cc95-4d23-aa4b-d8ea28f4a97d",
+        "timestamp": 1792024697371
+      },
+      {
+        "executionId": "89b319cf-5a2d-488d-80d1-e50cd1974027",
+        "chatSessionId": "sess_a94585f0-cc95-4d23-aa4b-d8ea28f4a97d",
+        "timestamp": 1792025525527
+      }
+    ],
+    "16.4 Run the manual E2E path against the deployed site": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022468578
+      },
+      {
+        "executionId": "89b319cf-5a2d-488d-80d1-e50cd1974027",
+        "chatSessionId": "sess_a94585f0-cc95-4d23-aa4b-d8ea28f4a97d",
+        "timestamp": 1792025528963
+      },
+      {
+        "executionId": "89b319cf-5a2d-488d-80d1-e50cd1974027",
+        "chatSessionId": "sess_a94585f0-cc95-4d23-aa4b-d8ea28f4a97d",
+        "timestamp": 1792029509985
+      }
+    ],
+    "17.1 Complete the README (roadmap, commands, local run, deploy, Phase 0 cost estimate for CloudFront, S3, API Gateway and Lambda)": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022468755
+      },
+      {
+        "executionId": "90711e79-2cbd-452b-93b9-59846ea9cbcf",
+        "chatSessionId": "sess_c8863d00-7fec-4f84-a8f1-42cca284bb52",
+        "timestamp": 1792033797687
+      },
+      {
+        "executionId": "90711e79-2cbd-452b-93b9-59846ea9cbcf",
+        "chatSessionId": "sess_c8863d00-7fec-4f84-a8f1-42cca284bb52",
+        "timestamp": 1792033905065
+      }
+    ],
+    "17.2 Update `tech.md` with the confirmed styling decision (D2) and the `chat` / `hint` split (D1), and record the status of open decisions 2, 4, 4b and 5 in this design": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022468850
+      },
+      {
+        "executionId": "90711e79-2cbd-452b-93b9-59846ea9cbcf",
+        "chatSessionId": "sess_c8863d00-7fec-4f84-a8f1-42cca284bb52",
+        "timestamp": 1792033797889
+      },
+      {
+        "executionId": "90711e79-2cbd-452b-93b9-59846ea9cbcf",
+        "chatSessionId": "sess_c8863d00-7fec-4f84-a8f1-42cca284bb52",
+        "timestamp": 1792033905331
+      }
+    ],
+    "17.3 Write `docs/posts/post-01-spec-driven.md` about planning an agent project with Kiro, including the demo URL, front-end description and decisions made": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022468954
+      },
+      {
+        "executionId": "90711e79-2cbd-452b-93b9-59846ea9cbcf",
+        "chatSessionId": "sess_c8863d00-7fec-4f84-a8f1-42cca284bb52",
+        "timestamp": 1792033798615
+      },
+      {
+        "executionId": "90711e79-2cbd-452b-93b9-59846ea9cbcf",
+        "chatSessionId": "sess_c8863d00-7fec-4f84-a8f1-42cca284bb52",
+        "timestamp": 1792033905921
+      }
+    ],
+    "17.4 Tag the repository `fase-0` after the user approves the final state": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022469051
+      },
+      {
+        "executionId": "90711e79-2cbd-452b-93b9-59846ea9cbcf",
+        "chatSessionId": "sess_c8863d00-7fec-4f84-a8f1-42cca284bb52",
+        "timestamp": 1792036743185
+      }
+    ],
+    "14. Write the CDK tests": [
+      {
+        "executionId": "0e151b36-12fe-48d9-9318-1ff86c7a9e39",
+        "chatSessionId": "sess_4e3ac6d6-eba2-4312-a972-4e48adfc179c",
+        "timestamp": 1792022741771
+      }
+    ],
+    "15. Checkpoint: full build": [
+      {
+        "executionId": "f53b0292-6eca-4e9e-b0b2-cfa1ee385a18",
+        "chatSessionId": "sess_18480192-c69c-41c3-b5f4-8be5f4e3824b",
+        "timestamp": 1792023183337
+      }
+    ],
+    "16. Deploy and verify in AWS": [
+      {
+        "executionId": "89b319cf-5a2d-488d-80d1-e50cd1974027",
+        "chatSessionId": "sess_a94585f0-cc95-4d23-aa4b-d8ea28f4a97d",
+        "timestamp": 1792029510270
+      }
+    ]
+  }
+}

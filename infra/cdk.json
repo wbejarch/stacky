@@ -1,0 +1,14 @@
+{
+  "app": "npx ts-node --prefer-ts-exts bin/app.ts",
+  "watch": {
+    "include": ["**"],
+    "exclude": ["README.md", "cdk*.json", "**/*.d.ts", "**/*.js", "tsconfig.json", "package*.json", "node_modules", "test"]
+  },
+  "context": {
+    "projectName": "tutor-agent",
+    "phase": "0",
+    "region": "us-east-1",
+    "allowedOrigins": ["http://localhost:5173"],
+    "webDistPath": "../web/dist"
+  }
+}

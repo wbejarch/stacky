@@ -1,0 +1,30 @@
+{
+  "name": "tutor-agent",
+  "version": "0.0.0",
+  "private": true,
+  "description": "AI-agent programming tutor: beginner Python with a Socratic tutor agent",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "workspaces": [
+    "shared",
+    "web",
+    "api",
+    "infra"
+  ],
+  "scripts": {
+    "lint": "npm run lint:root && npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint:root": "eslint eslint.config.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.12.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.13.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@tutor-agent/shared",
+  "version": "0.0.0",
+  "private": true,
+  "description": "API contract (zod schemas and inferred types) shared by web and api",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./content": "./src/content-schema.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "vitest": "5.0.4"
+  }
+}

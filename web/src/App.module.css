@@ -1,0 +1,208 @@
+/* The app fills the viewport; each zone scrolls on its own. */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+/* Three zones side by side: lesson | practice | chat. */
+.layout {
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(18rem, 1fr) minmax(0, 1.5fr) minmax(18rem, 0.9fr);
+  grid-template-rows: minmax(0, 1fr);
+  gap: var(--space-3);
+  min-height: 0;
+  padding: var(--space-3);
+}
+
+.zone {
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Practice zone: exercise statement, editor and results stacked. */
+.workspace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4);
+}
+
+.editorLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--editor-height);
+  margin: 0;
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+}
+
+/* The bottom tab bar only exists on narrow screens. */
+.tabbar {
+  display: none;
+}
+
+/* Loading and error states of the initial data load. */
+.state {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--space-8) var(--space-4);
+  background: var(--color-surface);
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 40rem;
+  margin: 0;
+  padding: var(--space-4) var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.spinner {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 3px solid var(--color-border-strong);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.errorBox {
+  flex-direction: column;
+  align-items: flex-start;
+  border-color: var(--color-danger-border);
+  border-left-width: 6px;
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.errorText {
+  margin: 0;
+}
+
+.retry {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  cursor: pointer;
+}
+
+.retry:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+/* Narrow laptops: lesson and chat share the width, practice goes below the lesson. */
+@media (max-width: 1199px) and (min-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(20rem, 1.2fr) minmax(0, 1.3fr) minmax(15rem, 0.9fr);
+    gap: var(--space-2);
+    padding: var(--space-2);
+  }
+}
+
+/* Below 900 px: one zone at a time, chosen from the bottom tab bar. */
+@media (max-width: 899px) {
+  .layout {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .zone {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .layout[data-view='lesson'] > .zone:not([data-zone='lesson']),
+  .layout[data-view='practice'] > .zone:not([data-zone='practice']),
+  .layout[data-view='tutor'] > .zone:not([data-zone='tutor']) {
+    display: none;
+  }
+
+  .tabbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--color-border-strong);
+    background: var(--color-bg);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .tab {
+    min-height: 3rem;
+    padding: var(--space-2) var(--space-3);
+    border: none;
+    border-top: 3px solid transparent;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .tabActive {
+    border-top-color: var(--color-primary);
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+}
+
+/* Count of tutor messages the student has not seen yet (shown on the "Tutor" tab). */
+.badge {
+  display: inline-block;
+  min-width: 1.25rem;
+  margin-left: var(--space-2);
+  padding: 0 var(--space-1);
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Phones and tablets: comfortable touch targets. */
+@media (pointer: coarse) {
+  .retry {
+    min-height: var(--touch-target);
+  }
+}
